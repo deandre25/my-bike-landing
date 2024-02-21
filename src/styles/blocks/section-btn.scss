@@ -23,13 +23,13 @@
 
     @include onTablet {
       --columns: 6;
-      grid-column: 2 / -2;
+
       margin-bottom: 120px;
     }
 
     @include onDesktop {
       --columns: 12;
-      grid-column: 5 / -5;
+
       margin-bottom: 180px;
     }
 
