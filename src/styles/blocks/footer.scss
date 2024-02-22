@@ -1,8 +1,26 @@
 .footer {
-  animation: bounce 2s ease-in-out  infinite;
-  &__img {
-    height: 100vh;
-    max-width: 100%;
-    object-fit: cover;
-  }
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-container {
+  background-image: url('../images/footer.png');
+
+  min-height: 100vh;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer__img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 100vh;
+  max-width: 100%;
+  z-index: -1;
 }

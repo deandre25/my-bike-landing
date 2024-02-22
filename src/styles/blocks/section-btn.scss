@@ -2,6 +2,8 @@
   @include pageGrid;
 
   &-btn {
+    border: none;
+    cursor: pointer;
     grid-column: 1 / -1;
     margin: 0;
     display: grid;
@@ -24,12 +26,14 @@
     @include onTablet {
       --columns: 6;
 
+      grid-column: 2 / -2;
       margin-bottom: 120px;
     }
 
     @include onDesktop {
       --columns: 12;
 
+      grid-column: 5 / -5;
       margin-bottom: 180px;
     }
 
