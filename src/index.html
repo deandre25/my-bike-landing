@@ -31,7 +31,11 @@
 
             <div class="top-bar__icons">
               <a href="tel:+1 234 5555-55-55" class="icon icon--phone"></a>
-              <a href="#menu"class="icon icon--menu"></a>
+              <a
+                onclick="toggleMenu()"
+                href="#menu"
+                class="icon icon--menu"
+              ></a>
             </div>
           </div>
 
@@ -45,33 +49,61 @@
     <aside class="page__menu menu" id="menu">
       <div class="container">
         <div class="top-bar menu__top">
-          <a href="#" class="top-bar__logo-link">
+          <a
+            href="#"
+            class="top-bar__logo-link"
+            onclick="toggleMenu()"
+          >
             <img
               src="images/logo-black.png"
               alt="BIKE logo"
               class="top-bar__logo"
             >
           </a>
-          <a href="#"class="icon icon--close"></a>
+          <a
+            onclick="toggleMenu()"
+            href="#"
+            class="icon icon--close"
+          ></a>
         </div>
 
         <div class="menu__bottom">
           <nav class="nav menu__nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="#">Home</a>
+                <a
+                  class="nav__link"
+                  href="#"
+                  onclick="toggleMenu()"
+                >Home</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#about-us">About Us</a>
+                <a
+                  class="nav__link"
+                  href="#about-us"
+                  onclick="toggleMenu()"
+                >About Us</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#compare-bikes">Compare Bikes</a>
+                <a
+                  class="nav__link"
+                  href="#compare-bikes"
+                  onclick="toggleMenu()"
+                >Compare Bikes</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#details">Details</a>
+                <a
+                  class="nav__link"
+                  href="#details"
+                  onclick="toggleMenu()"
+                >Details</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#contacts">Contacts</a>
+                <a
+                  class="nav__link"
+                  href="#contacts"
+                  onclick="toggleMenu()"
+                >Contacts</a>
               </li>
             </ul>
           </nav>
@@ -298,5 +330,18 @@
           class="footer__img">
       </div>
     </footer>
+
+    <script>
+      function toggleMenu() {
+            let body = document.body;
+            let menu = document.getElementById('menu');
+            body.classList.toggle('menu-open');
+            if (body.classList.contains('menu-open')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = 'auto';
+            }
+        }
+    </script>
   </body>
 </html>

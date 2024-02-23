@@ -5,6 +5,7 @@
     grid-column: 1 / -1;
 
     &-input {
+      outline: none;
       padding-left: 16px;
       box-sizing: border-box;
       border: 1px solid #fff;
@@ -16,6 +17,7 @@
     }
 
     &-textarea {
+      outline: none;
       font-family: Poppins, sans-serif;
       resize: none;
       box-sizing: border-box;
